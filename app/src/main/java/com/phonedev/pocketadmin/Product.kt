@@ -1,9 +1,9 @@
 package com.phonedev.pocketadmin
 
-data class Product(var id:String?,
-                   var name:String?,
-                   var description:String?,
-                   var imgUrl:String?,
+data class Product(var id:String? = null,
+                   var name:String? = null,
+                   var description:String? = null,
+                   var imgUrl:String? = null,
                    var quantity:Int = 0,
                    var price:Double = 0.0){
     override fun equals(other: Any?): Boolean {
