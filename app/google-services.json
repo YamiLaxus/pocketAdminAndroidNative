@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "630920636530",
+    "firebase_url": "https://fire-base-e4be5-default-rtdb.firebaseio.com",
+    "project_id": "fire-base-e4be5",
+    "storage_bucket": "fire-base-e4be5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630920636530:android:280686f6091380ed5a3aeb",
+        "android_client_info": {
+          "package_name": "com.phonedev.holafirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630920636530-djbcjquk1b7ucldgkeu0a1a0j86u0qnv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3sO-zgIbb7fK5lp5woXri6n-stgH4DsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630920636530-djbcjquk1b7ucldgkeu0a1a0j86u0qnv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630920636530:android:676047a0c8b7b6f25a3aeb",
+        "android_client_info": {
+          "package_name": "com.phonedev.pocketadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630920636530-djbcjquk1b7ucldgkeu0a1a0j86u0qnv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3sO-zgIbb7fK5lp5woXri6n-stgH4DsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630920636530-djbcjquk1b7ucldgkeu0a1a0j86u0qnv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
