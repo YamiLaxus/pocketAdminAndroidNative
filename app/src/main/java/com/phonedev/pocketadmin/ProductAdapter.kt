@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.phonedev.pocketadmin.databinding.ItemProductBinding
 
 class ProductAdapter(private val productList: MutableList<Product>,
@@ -28,6 +30,14 @@ class ProductAdapter(private val productList: MutableList<Product>,
         holder.binding.tvName.text = product.name
         holder.binding.tvPrice.text = product.price.toString()
         holder.binding.tvQuantity.text = product.quantity.toString()
+
+        Glide.with(context)
+            .load(product.imgUrl)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .placeholder(R.drawable.ic_timelapse)
+            .error(R.drawable.ic_broken_image)
+            .centerCrop()
+            .into(holder.binding.imageProduct)
     }
 
     override fun getItemCount(): Int = productList.size
@@ -36,6 +46,24 @@ class ProductAdapter(private val productList: MutableList<Product>,
         if (!productList.contains(product)){
             productList.add(product)
             notifyItemInserted(productList.size - 1)
+        } else{
+            update(product)
+        }
+    }
+
+    fun update(product: Product){
+        val index = productList.indexOf(product)
+        if (index != -1){
+            productList.set(index, product)
+            notifyItemChanged(index)
+        }
+    }
+
+    fun delete(product: Product){
+        val index = productList.indexOf(product)
+        if (index != -1){
+            productList.removeAt(index)
+            notifyItemRemoved(index)
         }
     }
 

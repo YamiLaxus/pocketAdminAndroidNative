@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:padding="16dp">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -45,7 +46,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:visibility="gone"
-        app:layout_constraintGuide_percent="8.5" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilCantidad"
@@ -85,5 +86,53 @@
             android:inputType="numberDecimal"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imgProductPrevie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common_padding_min"
+        android:layout_marginEnd="@dimen/common_padding_min"
+        android:background="@color/gray_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tilPrice"
+        app:layout_constraintDimensionRatio="16:9"/>
+
+    <ImageButton
+        android:id="@+id/ibProduct"
+        android:src="@drawable/ic_image_search"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/imgProductPrevie"
+        app:layout_constraintEnd_toEndOf="@id/imgProductPrevie"
+        app:layout_constraintTop_toTopOf="@id/imgProductPrevie"
+        app:layout_constraintBottom_toBottomOf="@id/imgProductPrevie"/>
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:progress="75"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgProductPrevie"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Subiendo... 75%"
+        android:layout_marginTop="@dimen/common_padding_min"
+        app:layout_constraintStart_toStartOf="@id/progress_bar"
+        app:layout_constraintTop_toTopOf="@id/progress_bar"
+        app:layout_constraintTop_toBottomOf="@id/progress_bar"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
