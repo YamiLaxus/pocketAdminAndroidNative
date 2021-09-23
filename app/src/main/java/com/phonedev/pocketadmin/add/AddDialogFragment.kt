@@ -1,4 +1,4 @@
-package com.phonedev.pocketadmin
+package com.phonedev.pocketadmin.add
 
 import android.app.Activity
 import android.app.Dialog
@@ -20,6 +20,9 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.phonedev.pocketadmin.databinding.FragmentDialogAddBinding
+import com.phonedev.pocketadmin.entities.EventPost
+import com.phonedev.pocketadmin.entities.Product
+import com.phonedev.pocketadmin.products.MainAux
 
 class AddDialogFragment : DialogFragment(), DialogInterface.OnShowListener {
 

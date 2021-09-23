@@ -1,5 +1,3 @@
-package com.phonedev.pocketadmin
-
 object Constants {
     const val COLL_PRODUCTS = "products"
 

@@ -1,4 +1,4 @@
-package com.phonedev.pocketadmin
+package com.phonedev.pocketadmin.entities
 
 import com.google.firebase.firestore.Exclude
 
