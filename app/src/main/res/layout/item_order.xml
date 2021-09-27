@@ -10,28 +10,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnTrack"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilStatus"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/common_padding_min"
-            android:text="@string/order_track_shipment"
-            app:icon="@drawable/ic_local_shipping"
-            app:iconGravity="textEnd"
+            android:hint="@string/hint_status"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvStatus"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/common_padding_min"
-            android:text="@string/order_estatus"
-            android:textAppearance="?attr/textAppearanceSubtitle2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btnTrack"
-            app:layout_constraintTop_toTopOf="@id/btnTrack"
-            app:layout_constraintBottom_toBottomOf="@id/btnTrack"/>
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/actvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvId"
@@ -63,7 +57,7 @@
             android:text="@string/chip_chat_help"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvProductName"
-            app:layout_constraintBottom_toTopOf="@id/btnTrack"/>
+            app:layout_constraintBottom_toTopOf="@id/tilStatus"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvTotalPrice"

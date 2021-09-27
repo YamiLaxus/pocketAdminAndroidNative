@@ -18,4 +18,5 @@
     <string name="order_status_unknown">Desconocido</string>
 
     <string name="track_title">Rastreo</string>
+    <string name="hint_status">Estado</string>
 </resources>

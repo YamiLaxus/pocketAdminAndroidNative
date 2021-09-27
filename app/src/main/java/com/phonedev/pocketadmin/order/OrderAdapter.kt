@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.phonedev.pocketadmin.R
 import com.phonedev.pocketadmin.databinding.ItemOrderBinding
@@ -49,9 +50,14 @@ class OrderAdapter(
             context.getString(R.string.product_full_cart, order.totalPrice)
 
         val index = aKeys.indexOf1(order.status)
-        val statusStr =
-            if (index != -1) aValue[index] else context.getString(R.string.order_status_unknown)
-        holder.binding.tvStatus.text = context.getString(R.string.order_estatus, statusStr)
+        val statusAdapter = ArrayAdapter(context, android.R.layout.simple_dropdown_item_1line, aValue)
+
+        holder.binding.actvStatus.setAdapter(statusAdapter)
+        if (index != -1){
+            holder.binding.actvStatus.setText(aValue [index], false)
+        } else {
+            holder.binding.actvStatus.setText(context.getString(R.string.order_status_unknown), false)
+        }
     }
 
     override fun getItemCount(): Int = orderList.size
@@ -65,8 +71,9 @@ class OrderAdapter(
         val binding = ItemOrderBinding.bind(view)
 
         fun setListener(order: Order) {
-            binding.btnTrack.setOnClickListener {
-                listener.onTrack(order)
+            binding.actvStatus.setOnItemClickListener { adapterView, view, position, id ->
+                order.status = aKeys[position]
+                listener.onStatusChange(order)
             }
 
             binding.chipChat.setOnClickListener {
@@ -74,5 +81,4 @@ class OrderAdapter(
             }
         }
     }
-
 }

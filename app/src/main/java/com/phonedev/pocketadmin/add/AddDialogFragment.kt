@@ -20,6 +20,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.phonedev.pocketadmin.databinding.FragmentDialogAddBinding
+import com.phonedev.pocketadmin.entities.Constants
 import com.phonedev.pocketadmin.entities.EventPost
 import com.phonedev.pocketadmin.entities.Product
 import com.phonedev.pocketadmin.products.MainAux

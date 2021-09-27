@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
-import com.phonedev.pocketadmin.R
 import com.phonedev.pocketadmin.databinding.ActivityOrderBinding
+import com.phonedev.pocketadmin.entities.Constants
 import com.phonedev.pocketadmin.entities.Order
 
 class OrderActivity : AppCompatActivity(), OnOrderListener, OrderAux {
@@ -56,6 +56,18 @@ class OrderActivity : AppCompatActivity(), OnOrderListener, OrderAux {
     }
 
     override fun onStatusChange(order: Order) {
+
+        val db = FirebaseFirestore.getInstance()
+        db.collection(Constants.COLL_REQUEST)
+            .document(order.id)
+            .update(Constants.PROP_STATUS, order.status)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Orden Actualizada", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Error al actualizar Estado", Toast.LENGTH_SHORT).show()
+            }
+
 
     }
 
