@@ -5,9 +5,11 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
+import com.phonedev.pocketadmin.R
 import com.phonedev.pocketadmin.databinding.ActivityOrderBinding
 import com.phonedev.pocketadmin.entities.Constants
 import com.phonedev.pocketadmin.entities.Order
+import com.phonedev.pocketstore.chat.ChatFragment
 
 class OrderActivity : AppCompatActivity(), OnOrderListener, OrderAux {
 
@@ -26,7 +28,7 @@ class OrderActivity : AppCompatActivity(), OnOrderListener, OrderAux {
         setupFirestore()
     }
 
-    private fun setupRecyclerView(){
+    private fun setupRecyclerView() {
         adapter = OrderAdapter(mutableListOf(), this)
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(this@OrderActivity)
@@ -34,13 +36,13 @@ class OrderActivity : AppCompatActivity(), OnOrderListener, OrderAux {
         }
     }
 
-    private fun setupFirestore(){
+    private fun setupFirestore() {
         val db = FirebaseFirestore.getInstance()
 
         db.collection(Constants.COLL_REQUEST)
             .get()
             .addOnSuccessListener {
-                for (document in it){
+                for (document in it) {
                     val order = document.toObject(Order::class.java)
                     order.id = document.id
                     adapter.add(order)
@@ -52,7 +54,14 @@ class OrderActivity : AppCompatActivity(), OnOrderListener, OrderAux {
     }
 
     override fun onStartChat(order: Order) {
+        orderSelected = order
 
+        val fragment = ChatFragment()
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.containerMain, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 
     override fun onStatusChange(order: Order) {

@@ -7,5 +7,8 @@ object Constants {
     const val PROP_STATUS = "status"
 
     //storage
-    const val PATH_PRODUCT_IMGAES = "product_images"
+    const val PATH_PRODUCT_IMAGES = "product_images"
+
+    //Realtime Database
+    const val PATH_CHATS = "chats"
 }

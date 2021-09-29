@@ -157,7 +157,7 @@ class AddDialogFragment : DialogFragment(), DialogInterface.OnShowListener {
             .collection(Constants.COLL_PRODUCTS)
             .document().id
         var storageRef =
-            FirebaseStorage.getInstance().reference.child(Constants.PATH_PRODUCT_IMGAES)
+            FirebaseStorage.getInstance().reference.child(Constants.PATH_PRODUCT_IMAGES)
 
         photoSelectedUri?.let { uri ->
             binding?.let { binding ->

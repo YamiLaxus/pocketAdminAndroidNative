@@ -3,4 +3,7 @@
     <dimen name="common_padding_min">8dp</dimen>
     <dimen name="product_image_width">148dp</dimen>
     <dimen name="common_padding_default">16dp</dimen>
+    <dimen name="chat_stroke">1dp</dimen>
+    <dimen name="chat_guideline_chat">48dp</dimen>
+    <dimen name="chat_margin_horizontal">64dp</dimen>
 </resources>
