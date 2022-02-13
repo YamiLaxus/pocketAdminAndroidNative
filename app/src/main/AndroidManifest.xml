@@ -11,15 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PocketAdmin">
-        <activity android:name=".order.OrderActivity"
-            android:label="@string/order_title"/>
-        <activity android:name=".products.MainActivity">
+        <activity
+            android:name=".add.AddActivity"
+            android:exported="true" />
+        <activity
+            android:name=".products.HomeActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".order.OrderActivity"
+            android:label="@string/order_title" />
+        <activity android:name=".products.MainActivity" />
     </application>
 
 </manifest>

@@ -92,7 +92,6 @@ class AddDialogFragment : DialogFragment(), DialogInterface.OnShowListener {
                                 val product = Product(
                                     name = it.etName.text.toString().trim(),
                                     description = it.etDesciption.text.toString().trim(),
-                                    imgUrl = eventPost.phtoUrl,
                                     quantity = it.etCantidad.text.toString().toInt(),
                                     price = it.etPrice.text.toString().toDouble()
                                 )
@@ -102,7 +101,6 @@ class AddDialogFragment : DialogFragment(), DialogInterface.OnShowListener {
                                 product?.apply {
                                     name = it.etName.text.toString().trim()
                                     description = it.etDesciption.text.toString().trim()
-                                    imgUrl = eventPost.phtoUrl
                                     quantity = it.etCantidad.text.toString().toInt()
                                     price = it.etPrice.text.toString().toDouble()
 
@@ -248,5 +246,4 @@ class AddDialogFragment : DialogFragment(), DialogInterface.OnShowListener {
         super.onDestroyView()
         binding = null
     }
-
 }

@@ -22,4 +22,15 @@
 
     <string name="hint_chat">Escribe algo...</string>
     <string name="chat_title">Soporte</string>
+    <string name="nombre_del_producto">Nombre del Producto</string>
+    <string name="descripci_n_del_producto">Descripción del Producto</string>
+    <string name="url_image">URL Image</string>
+    <string name="map_image">Map Image</string>
+    <string name="facebook_url">Facebook Url</string>
+    <string name="no_tel_fono">No. Teléfono</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="precio">Precio</string>
+    <string name="disponible">Disponible</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>

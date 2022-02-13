@@ -2,6 +2,7 @@ package com.phonedev.pocketadmin.entities
 
 object Constants {
     const val COLL_PRODUCTS = "products"
+    const val COLL_PHONE = "telefonos"
     const val COLL_REQUEST =  "request"
 
     const val PROP_STATUS = "status"

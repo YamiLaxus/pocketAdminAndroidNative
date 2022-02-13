@@ -40,6 +40,74 @@
             android:inputType="textNoSuggestions|textMultiLine"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilImgUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="URL Image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilDescription"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etImgMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilImgMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Map Image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilImgUrl"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etImgUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Facebook Url"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilImgMap"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="No. Teléfono"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilFacebook"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -56,7 +124,7 @@
         android:hint="Cantidad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/tilDescription"
+        app:layout_constraintTop_toBottomOf="@id/tilPhone"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
         <com.google.android.material.textfield.TextInputEditText
